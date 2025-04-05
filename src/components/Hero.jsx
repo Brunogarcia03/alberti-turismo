@@ -61,9 +61,7 @@ function Hero() {
             <div className="w-full text-center lg:text-left">
               <h1 className="text-5xl lg:text-7xl font-bold text-[#00ACD3]">
                 Descubrí el encanto de{" "}
-                <span className="text-[#98217E] border-b-8 border-[#98217E]">
-                  Alberti
-                </span>
+                <span className="text-[#98217E]">Alberti</span>
               </h1>
               <p className="text-xl my-8 text-[#67666a]">
                 Alberti, un rincón de Buenos Aires lleno de historia, naturaleza

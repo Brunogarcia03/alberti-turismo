@@ -5,7 +5,7 @@ function Museos() {
   return (
     <section className="flex flex-col lg:flex-row gap-16 items-center lg:items-start justify-center max-w-7xl mx-auto py-24 overflow-hidden">
       {/* Museo Raúl Lozza */}
-      <div className="flex flex-col items-start justify-center max-w-2xl lg:w-[450px]">
+      <div className="card flex flex-col items-start justify-center max-w-2xl lg:w-[450px]">
         <motion.img
           initial={{ opacity: 0, y: -20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -23,7 +23,7 @@ function Museos() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="text-[#98217E] border-b-8 border-[#98217E]"
+            className="text-[#98217E]"
           >
             "Raul Lozza"
           </motion.span>
@@ -64,7 +64,7 @@ function Museos() {
       </div>
 
       {/* Casa Histórica El Molino */}
-      <div className="flex flex-col items-start justify-center max-w-2xl lg:w-[450px]">
+      <div className="card flex flex-col items-start justify-center max-w-2xl lg:w-[450px]">
         <motion.img
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -82,7 +82,7 @@ function Museos() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="text-[#98217E] border-b-8 border-[#98217E]"
+            className="text-[#98217E]"
           >
             "El Molino"
           </motion.span>

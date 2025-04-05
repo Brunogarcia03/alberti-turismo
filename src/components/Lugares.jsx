@@ -5,7 +5,7 @@ const Lugares = () => {
   return (
     <>
       <section className="flex flex-col lg:flex-row gap-16 items-center lg:items-start justify-center max-w-7xl mx-auto mt-8 pb-24 overflow-hidden">
-        <article className="flex flex-col items-start justify-center max-w-2xl lg:w-[450px]">
+        <article className="card flex flex-col items-start justify-center max-w-2xl lg:w-[450px]">
           <motion.img
             initial={{ opacity: 0, y: -20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -56,7 +56,7 @@ const Lugares = () => {
             de la población y las necesidades parroquiales".
           </motion.p>
         </article>
-        <article className="flex flex-col items-start justify-center max-w-2xl lg:w-[450px]">
+        <article className="card flex flex-col items-start justify-center max-w-2xl lg:w-[450px]">
           <motion.img
             initial={{ opacity: 0, y: -20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -73,7 +73,7 @@ const Lugares = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: 0.4 }}
-              className="ml-2 text-[#98217E] border-b-8 border-[#98217E]"
+              className="ml-2 text-[#98217E]"
             >
               Municipal
             </motion.span>
@@ -85,7 +85,7 @@ const Lugares = () => {
               transition={{ duration: 0.6, delay: 0.6 }}
               className="text-2xl lg:text-3xl text-gray-700"
             >
-              Nuestra señora de la merced
+              Nuestra Señora de la Merced
             </motion.span>
           </h1>
           <motion.p

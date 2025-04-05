@@ -55,7 +55,7 @@ const Salamone = () => {
                 delay: 0.4 + index * 0.1,
                 ease: "easeInOut",
               }}
-              className="inline-block text-[#98217E] border-b-8 border-[#98217E]"
+              className="inline-block text-[#98217E]"
             >
               {word}
             </motion.span>
@@ -68,7 +68,7 @@ const Salamone = () => {
             <div
               onMouseEnter={() => setModal({ active: true, index })}
               onMouseLeave={() => setModal({ active: false, index })}
-              className="flex w-full justify-between items-center px-20 py-8 border-t border-[#98217E] cursor-pointer transition-all duration-200 hover:opacity-50 group"
+              className="flex w-full justify-between items-center px-[5%] md:px-20 py-8 border-t border-[#98217E] cursor-pointer transition-all duration-200 hover:opacity-50 group"
             >
               <div className="max-w-4xl mx-auto flex w-full justify-between items-center">
                 <h2 className="text-3xl m-0 font-semibold text-[#00ACD3] transition-all duration-[0.4s] group-hover:-translate-x-[10px]">

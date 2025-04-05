@@ -2,7 +2,7 @@ import { Instagram, Mail, Phone, MapPin, Facebook } from "lucide-react";
 
 function Footer() {
   return (
-    <footer className="py-10 px-6 md:px-20">
+    <footer className="py-10 px-6 md:px-20 w-full lg:sticky bottom-0 z-[-1]">
       <div className="container mx-auto grid md:grid-cols-3 gap-10">
         {/* Sección Oficina de Turismo */}
         <div className="flex flex-col sm:flex-row sm:items-center items-start justify-between">
@@ -11,7 +11,7 @@ function Footer() {
               OFICINA DE TURISMO:
             </h2>
             <p className="flex items-center gap-2">
-              <MapPin size={18} /> Av. Vacarezza 181, Alberti
+              <MapPin size={18} /> Av. Vaccarezza 181, Alberti
             </p>
             <p>Pcia. de Buenos Aires, Argentina</p>
             <p className="flex items-center gap-2">

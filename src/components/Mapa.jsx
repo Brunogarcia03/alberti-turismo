@@ -5,7 +5,7 @@ import Heading from "../ui/Heading";
 
 function Mapa() {
   return (
-    <section className="min-h-screen w-full py-16">
+    <section className="md:min-h-screen overflow-x-hidden w-full py-16">
       {/* Título animado */}
       <div className="flex items-center justify-center text-4xl lg:text-6xl mx-auto text-center font-bold text-[#00ACD3] mb-10">
         <Heading title="Mapa" />
@@ -21,7 +21,7 @@ function Mapa() {
                 delay: 0.4 + index * 0.1,
                 ease: "easeInOut",
               }}
-              className="inline-block text-[#98217E] border-b-8 border-[#98217E]"
+              className="inline-block text-[#98217E]"
             >
               {letter}
             </motion.span>
@@ -33,7 +33,7 @@ function Mapa() {
       <div className="flex items-center justify-center max-w-5xl rounded-lg mx-auto text-center">
         <Zoom zoomMargin={40} transitionDuration={300}>
           <img
-            className="h-[80vh] object-cover rounded-lg zoom-image"
+            className="md:h-[80vh] object-cover rounded-lg zoom-image"
             src="/Mapa_Alberti.jpg"
             alt="Mapa Alberti"
           />
