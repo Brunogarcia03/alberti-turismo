@@ -5,7 +5,7 @@ import Heading from "../ui/Heading";
 
 function Mapa() {
   return (
-    <section className="md:min-h-screen overflow-x-hidden w-full py-16">
+    <section className="md:min-h-screen overflow-x-hidden w-full py-16 bg-white">
       {/* Título animado */}
       <div className="flex items-center justify-center text-4xl lg:text-6xl mx-auto text-center font-bold text-[#00ACD3] mb-10">
         <Heading title="Mapa" />
