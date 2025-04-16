@@ -50,9 +50,9 @@ function Hero() {
       <div className="w-full sm:w-8/12 mb-10">
         <div className="container mx-auto h-full sm:p-10">
           <nav className="flex px-4 justify-center md:justify-between items-center">
-            <div className="text-4xl font-bold text-[#00ACD3]">
+            <h1 className="text-4xl font-bold text-[#00ACD3]">
               Alberti<span className="text-[#98217E]">Turismo</span>
-            </div>
+            </h1>
             <div className="hidden md:block">
               <img src={"/Logo.jpeg"} alt="Logo" className="size-24" />
             </div>
@@ -85,7 +85,7 @@ function Hero() {
               repeat: Infinity,
               ease: "linear",
             }}
-            class="grid gap-4"
+            className="grid gap-4"
           >
             {Array.from({ length: 2 }).map((_, i) => (
               <Fragment key={i}>
@@ -108,7 +108,7 @@ function Hero() {
               repeat: Infinity,
               ease: "linear",
             }}
-            class="hidden md:grid gap-4"
+            className="hidden md:grid gap-4"
           >
             {Array.from({ length: 2 }).map((_, i) => (
               <Fragment key={i}>

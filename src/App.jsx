@@ -1,40 +1,45 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import { AnimatePresence } from "motion/react";
 
 import Main from "./pages/Main";
-import Galeria from "./pages/GaleriaPage";
 
 import PlaceTemplate from "./ui/PlaceTemplate";
 
 // Lugares Alberti
 import { lugaresDeAlberti } from "./utils/ListAlberti";
+import Transition from "./pages/Transition";
 
 function App() {
   return (
-    <AnimatePresence mode="wait">
-      <BrowserRouter>
-        <Routes>
-          <Route path="/" element={<Main />} />
-          <Route path="/galeria" element={<Galeria />} />
+    <BrowserRouter>
+      <Routes>
+        <Route
+          path="/"
+          element={
+            <Transition>
+              <Main />
+            </Transition>
+          }
+        />
 
-          {/* Lugares Alberti */}
-          {lugaresDeAlberti.map((item, index) => (
-            <Route
-              key={index}
-              path={`/${item.slug}`}
-              element={
+        {/* Lugares Alberti */}
+        {lugaresDeAlberti.map((item, index) => (
+          <Route
+            key={index}
+            path={`/${item.slug}`}
+            element={
+              <Transition>
                 <PlaceTemplate
                   title={item.titulo}
                   description={item.descripcion}
                   placeImage={item.url}
                   slug={item.slug}
                 />
-              }
-            />
-          ))}
-        </Routes>
-      </BrowserRouter>
-    </AnimatePresence>
+              </Transition>
+            }
+          />
+        ))}
+      </Routes>
+    </BrowserRouter>
   );
 }
 

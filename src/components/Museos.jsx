@@ -1,26 +1,41 @@
 import { motion } from "framer-motion";
 import Heading from "../ui/Heading";
+import { useNavigate } from "react-router-dom";
 
 function Museos() {
+  const navigate = useNavigate();
+
   return (
     <section className="flex flex-col lg:flex-row gap-16 items-center lg:items-start justify-center max-w-7xl mx-auto py-24 overflow-hidden">
       {/* Museo Raúl Lozza */}
       <div className="card flex flex-col items-start justify-center max-w-2xl lg:w-[450px]">
-        <motion.img
-          initial={{ opacity: 0, y: -20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-          className="w-full h-[300px] object-cover rounded-lg shadow-md"
-          src="/museos/raul_lozza.jpg"
-          alt="Museo Raúl Lozza"
-        />
-        <h1 className="text-4xl lg:text-5xl font-bold text-[#00ACD3] mt-4 mb-3">
+        <div className="w-full h-[300px] overflow-hidden rounded-lg cursor-pointer">
+          <motion.img
+            initial={{ opacity: 0, y: -20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            whileHover={{
+              scale: 1.2,
+              transition: { duration: 0.3, ease: "easeInOut" },
+            }}
+            onClick={() => navigate("museo")}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="w-full h-full object-cover rounded-lg shadow-md"
+            src="/museos/raul_lozza.jpg"
+            alt="Museo Raúl Lozza"
+          />
+        </div>
+
+        <h1
+          onClick={() => navigate("museo")}
+          className="text-4xl lg:text-5xl font-bold text-[#00ACD3] mt-4 mb-3 hover:translate-x-5 transition-all duration-300 cursor-pointer"
+        >
           <Heading title="Museo" />
           <br />
           <motion.span
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
+            onClick={() => navigate("museo")}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.2 }}
             className="text-[#98217E]"
@@ -57,6 +72,7 @@ function Museos() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.8 }}
+          onClick={() => navigate("museo")}
           className="w-full h-[150px] mt-4 object-cover rounded-lg shadow-md"
           src="/museos/museo_lozza.jpg"
           alt="Museo Raúl Lozza Asociación"
@@ -65,16 +81,27 @@ function Museos() {
 
       {/* Casa Histórica El Molino */}
       <div className="card flex flex-col items-start justify-center max-w-2xl lg:w-[450px]">
-        <motion.img
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-          className="w-full h-[300px] object-cover rounded-lg shadow-md"
-          src="/museos/vaccarezza.jpg"
-          alt="Casa Histórica El Molino"
-        />
-        <h1 className="text-4xl lg:text-5xl font-bold text-[#00ACD3] mt-4 mb-3">
+        <div className="w-full h-[300px] overflow-hidden rounded-lg cursor-pointer">
+          <motion.img
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            whileHover={{
+              scale: 1.2,
+              transition: { duration: 0.3, ease: "easeInOut" },
+            }}
+            onClick={() => navigate("vaccarezza")}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="w-full h-full object-cover rounded-lg shadow-md"
+            src="/museos/vaccarezza.jpg"
+            alt="Casa Histórica El Molino"
+          />
+        </div>
+
+        <h1
+          className="text-4xl lg:text-5xl font-bold text-[#00ACD3] mt-4 mb-3 hover:translate-x-5 transition-all duration-300 cursor-pointer"
+          onClick={() => navigate("vaccarezza")}
+        >
           <Heading title="Casa" /> <Heading title="Histórica" delayAnim={0.4} />
           <br />
           <motion.span

@@ -2,48 +2,9 @@ import React, { useEffect, useRef, useState } from "react";
 import { motion } from "motion/react";
 import { useNavigate } from "react-router-dom";
 
-const images = [
-  {
-    url: "/salamone/municipalidad.jpg",
-    slug: "municipalidad",
-  },
-  {
-    url: "/salamone/parque.jpg",
-    slug: "parque",
-  },
-  {
-    url: "/museos/vaccarezza.jpg",
-    slug: "vaccarezza",
-  },
-  {
-    url: "/museos/iglesia.jpg",
-    slug: "parroquia",
-  },
-  {
-    url: "/museos/hospital.jpg",
-    slug: "hospital",
-  },
-  {
-    url: "/salamone/secundaria.jpg",
-    slug: "escuela",
-  },
-  {
-    url: "/salamone/monumento.jpg",
-    slug: "plaza",
-  },
-  {
-    url: "/salamone/cementerio.jpg",
-    slug: "cementerio",
-  },
-  {
-    url: "/museos/museo_lozza.jpg",
-    slug: "museo",
-  },
-  {
-    url: "/photos/9.jpg",
-    slug: "estacion",
-  },
-];
+import { GiClick } from "react-icons/gi";
+
+import { lugaresDeAlberti } from "../utils/ListAlberti";
 
 function Carousel({ title }) {
   const navigation = useNavigate();
@@ -64,20 +25,23 @@ function Carousel({ title }) {
         transition={{ duration: 0.2, ease: "easeInOut" }}
         className="flex will-change-transform cursor-grab active:cursor-grabbing w-full"
       >
-        {images.map((item, index) => {
+        {lugaresDeAlberti.map((item, index) => {
           if (item.slug !== title) {
             return (
               <motion.div
                 key={index}
-                className="min-w-[20rem] min-h-[25rem] p-4"
+                className="min-w-[20rem] min-h-[25rem] p-4 group flex flex-col items-center justify-center overflow-hidden relative"
+                onDoubleClick={() => navigation(`/${item.slug}`)}
               >
                 <img
                   src={item.url}
                   width={400}
                   height={400}
                   alt={item.slug}
-                  className="w-full h-full object-cover pointer-events-none rounded-2xl"
+                  className="w-full h-full object-cover pointer-events-none rounded-2xl border-2 border-black"
                 />
+                <GiClick className="absolute scale-0 group-hover:scale-100 transition-all duration-300 text-white text-5xl" />
+                <GiClick className="absolute translate-x-2 -translate-y-2 scale-0 group-hover:scale-100 transition-all duration-300 text-[#00ACD3] text-5xl" />
               </motion.div>
             );
           }

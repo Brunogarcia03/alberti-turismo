@@ -1,22 +1,36 @@
 import { motion } from "motion/react";
 import Heading from "../ui/Heading";
+import { useNavigate } from "react-router-dom";
 
 const Lugares = () => {
+  const navigate = useNavigate();
+
   return (
     <>
       <section className="flex flex-col lg:flex-row gap-16 items-center lg:items-start justify-center max-w-7xl mx-auto mt-8 pb-24 overflow-hidden">
         <article className="card flex flex-col items-start justify-center max-w-2xl lg:w-[450px]">
-          <motion.img
-            initial={{ opacity: 0, y: -20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-            className="w-full h-[300px] object-cover rounded-lg shadow-md"
-            src="/museos/iglesia.jpg"
-            alt="Museo Raúl Lozza"
-          />
-          <h1 className="text-4xl lg:text-5xl font-bold text-[#00ACD3] mt-4 mb-3">
-            <Heading title="Iglesia" />
+          <div className="w-full h-[300px] overflow-hidden rounded-lg cursor-pointer">
+            <motion.img
+              initial={{ opacity: 0, y: -20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              whileHover={{
+                scale: 1.2,
+                transition: { duration: 0.3, ease: "easeInOut" },
+              }}
+              onClick={() => navigate("parroquia")}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6 }}
+              className="w-full h-full object-cover rounded-lg shadow-md"
+              src="/museos/iglesia.jpg"
+              alt="Museo Raúl Lozza"
+            />
+          </div>
+
+          <h1
+            onClick={() => navigate("parroquia")}
+            className="text-4xl lg:text-5xl font-bold text-[#00ACD3] mt-4 mb-3 hover:translate-x-5 transition-all duration-300 cursor-pointer"
+          >
+            <Heading title="Parroquia" />
             <br />
             <motion.span
               initial={{ opacity: 0, y: 20 }}
@@ -57,16 +71,27 @@ const Lugares = () => {
           </motion.p>
         </article>
         <article className="card flex flex-col items-start justify-center max-w-2xl lg:w-[450px]">
-          <motion.img
-            initial={{ opacity: 0, y: -20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-            className="w-full h-[300px] object-cover rounded-lg shadow-md"
-            src="/museos/hospital.jpg"
-            alt="Museo Raúl Lozza"
-          />
-          <h1 className="text-4xl lg:text-5xl font-bold text-[#00ACD3] mt-4 mb-3">
+          <div className="w-full h-[300px] overflow-hidden rounded-lg cursor-pointer">
+            <motion.img
+              initial={{ opacity: 0, y: -20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              whileHover={{
+                scale: 1.1,
+                transition: { duration: 0.3, ease: "easeInOut" },
+              }}
+              onClick={() => navigate("hospital")}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6 }}
+              className="w-full h-[300px] object-cover rounded-lg shadow-md"
+              src="/museos/hospital.jpg"
+              alt="Museo Raúl Lozza"
+            />
+          </div>
+
+          <h1
+            onClick={() => navigate("hospital")}
+            className="text-4xl lg:text-5xl font-bold text-[#00ACD3] mt-4 mb-3 hover:translate-x-5 transition-all duration-300 cursor-pointer"
+          >
             <Heading title="Hospital" />
             <motion.span
               initial={{ opacity: 0, y: 20 }}

@@ -1,41 +1,7 @@
 import { useAnimate } from "framer-motion";
 import React, { useRef } from "react";
-import { FiImage } from "react-icons/fi";
 
-export const Example = () => {
-  return (
-    <MouseImageTrail
-      renderImageBuffer={50}
-      rotationRange={25}
-      images={[
-        "/photos/1.jpeg",
-        "/photos/2.jpg",
-        "/photos/3.jpg",
-        "/photos/4.jpg",
-        "/photos/5.jpg",
-        "/photos/6.jpg",
-        "/photos/7.png",
-        "/photos/8.jpeg",
-        "/photos/9.jpg",
-        "/photos/10.jpg",
-        "/photos/11.jpeg",
-        "/photos/12.jpeg",
-        "/photos/13.jpeg",
-        "/photos/14.jpg",
-        "/photos/15.jpg",
-      ]}
-    >
-      <section className="grid h-[80vh] w-full place-content-center bg-neutral-300 rounded-3xl">
-        <p className="flex items-center gap-2 text-6xl font-bold uppercase text-black">
-          <FiImage />
-          <span>Galería</span>
-        </p>
-      </section>
-    </MouseImageTrail>
-  );
-};
-
-const MouseImageTrail = ({
+export const MouseImageTrail = ({
   children,
   // List of image sources
   images,

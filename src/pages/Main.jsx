@@ -8,19 +8,12 @@ import Museos from "../components/Museos";
 import Salamone from "../components/Salamone";
 import Galeria from "../components/Galeria";
 
-import {
-  PiBehanceLogo,
-  PiFacebookLogo,
-  PiPinterestLogo,
-  PiTiktokLogo,
-  PiWhatsappLogo,
-} from "react-icons/pi";
 import Footer from "../components/Footer";
 
 function Main() {
   return (
     <>
-      <main className="bg-white relative z-[10]">
+      <div className="bg-white relative z-[10]">
         <Hero />
         <Salamone />
         <Galeria />
@@ -61,7 +54,7 @@ function Main() {
         <Museos />
         <Lugares />
         <Mapa />
-      </main>
+      </div>
       <Footer />
     </>
   );

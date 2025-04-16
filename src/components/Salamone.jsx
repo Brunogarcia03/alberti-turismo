@@ -2,34 +2,40 @@ import { useState } from "react";
 import { motion } from "motion/react";
 import Modal from "../ui/Modal";
 import Heading from "../ui/Heading";
+import { useNavigate } from "react-router-dom";
 
 const projects = [
   {
     title: "Parque Municipal",
+    slug: "parque",
     subtitle: "Final Av. Vaccarezza",
     src: "parque.jpg",
     color: "#000000",
   },
   {
     title: "Cementerio Municipal",
+    slug: "cementerio",
     subtitle: "Final Av. Libertador Gral. San Martin",
     src: "cementerio.jpg",
     color: "#EFE8D3",
   },
   {
     title: "Monumento a la bandera",
+    slug: "plaza",
     subtitle: "Plaza Gral. Arias",
     src: "monumento.jpg",
     color: "#8C8C8C",
   },
   {
     title: "Palacio Municipal",
+    slug: "municipalidad",
     subtitle: "Alem y 9 de Julio",
     src: "municipalidad.jpg",
     color: "#706D63",
   },
   {
     title: "Escuela secundaria n°2 Pablo Pizzurno",
+    slug: "secundaria",
     subtitle: "Fachada",
     src: "secundaria.jpg",
     color: "#EFE8D3",
@@ -38,6 +44,8 @@ const projects = [
 
 const Salamone = () => {
   const [modal, setModal] = useState({ active: false, index: 0 });
+
+  const navigate = useNavigate();
 
   return (
     <section className="flex flex-col pt-20 items-center justify-center">
@@ -66,6 +74,8 @@ const Salamone = () => {
         {projects.map((project, index) => {
           return (
             <div
+              key={index}
+              onClick={() => navigate(`/${project.slug}`)}
               onMouseEnter={() => setModal({ active: true, index })}
               onMouseLeave={() => setModal({ active: false, index })}
               className="flex w-full justify-between items-center px-[5%] md:px-20 py-8 border-t border-[#98217E] cursor-pointer transition-all duration-200 hover:opacity-50 group"

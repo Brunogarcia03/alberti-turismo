@@ -36,7 +36,7 @@ export const lugaresDeAlberti = [
   },
   {
     url: "/salamone/secundaria.jpg",
-    slug: "escuela",
+    slug: "secundaria",
     titulo: "Escuela N°2: Semillero de Generaciones Albertinas",
     descripcion:
       "La Escuela Primaria N°2 'Domingo Faustino Sarmiento' es una de las instituciones educativas más emblemáticas de Alberti. Fundada en los albores del siglo XX, su edificio de estilo tradicional ha sido testigo del paso de miles de estudiantes que hoy integran el tejido social y profesional del pueblo. Con sus aulas amplias, galerías abiertas y el característico mástil en el patio central, la escuela mantiene ese espíritu de comunidad donde el aprendizaje va de la mano de la contención. Más allá del aula, la institución impulsa ferias científicas, actividades culturales y propuestas deportivas que enriquecen la formación de sus alumnos. Muchos de los actuales referentes locales —desde médicos hasta comerciantes— dieron sus primeros pasos académicos en sus aulas. En fechas patrias, la escuela se viste de fiesta con actos llenos de tradición y participación. Su cuerpo docente, comprometido y vocacional, ha sido clave en mantener la excelencia y el prestigio educativo a lo largo del tiempo. Hoy, la Escuela N°2 no solo forma a los futuros ciudadanos de Alberti, sino que también continúa siendo un símbolo de igualdad de oportunidades, acceso a la educación y crecimiento colectivo.",
