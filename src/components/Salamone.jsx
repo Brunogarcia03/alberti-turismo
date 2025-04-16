@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { motion } from "motion/react";
-import Modal from "../ui/Modal";
-import Heading from "../ui/Heading";
+import Modal from "../components/ui/Modal";
+import Heading from "../components/ui/Heading";
 import { useNavigate } from "react-router-dom";
 
 const projects = [

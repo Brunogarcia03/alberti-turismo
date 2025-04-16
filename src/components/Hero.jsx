@@ -68,7 +68,15 @@ function Hero() {
                 y calidez. Vení a explorar nuestras tradiciones y paisajes
                 inolvidables.
               </p>
-              <button className="bg-[#98217E] hover:scale-105 text-white text-2xl font-medium px-6 py-3 rounded-lg shadow-lg transition duration-300">
+              <button
+                onClick={() => {
+                  const element = document.querySelector(`#lugares`);
+                  element?.scrollIntoView({
+                    behavior: "smooth",
+                  });
+                }}
+                className="bg-[#98217E] hover:scale-105 text-white text-2xl font-medium px-6 py-3 rounded-lg shadow-lg transition duration-300"
+              >
                 Conocé más
               </button>
             </div>

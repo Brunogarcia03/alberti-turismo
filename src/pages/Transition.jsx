@@ -1,7 +1,7 @@
 import { AnimatePresence, motion, useMotionValue } from "motion/react";
 import React, { Fragment, useCallback } from "react";
 import { useLocation } from "react-router-dom";
-import Layout from "../ui/Stairs";
+import Layout from "../components/ui/Stairs";
 
 export default function Transition({ children }) {
   const location = useLocation();

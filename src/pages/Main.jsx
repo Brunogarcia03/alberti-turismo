@@ -1,5 +1,5 @@
-import { motion, AnimatePresence } from "motion/react";
-import Heading from "../ui/Heading";
+import { motion } from "motion/react";
+import Heading from "../components/ui/Heading";
 
 import Hero from "../components/Hero";
 import Lugares from "../components/Lugares";
@@ -17,7 +17,10 @@ function Main() {
         <Hero />
         <Salamone />
         <Galeria />
-        <div className="flex items-center justify-center text-4xl lg:text-6xl mx-auto text-center font-bold text-[#00ACD3] mt-24">
+        <div
+          className="flex items-center justify-center text-4xl lg:text-6xl mx-auto text-center font-bold text-[#00ACD3] mt-24"
+          id="lugares"
+        >
           <Heading title="Lugares" />
           <motion.span
             initial={{ opacity: 0, filter: "blur(4px)", y: 10 }}

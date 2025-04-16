@@ -2,11 +2,12 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 
 import Main from "./pages/Main";
 
-import PlaceTemplate from "./ui/PlaceTemplate";
+import PlaceTemplate from "./pages/PlaceTemplate";
 
 // Lugares Alberti
 import { lugaresDeAlberti } from "./utils/ListAlberti";
 import Transition from "./pages/Transition";
+import GaleriaPage from "./pages/GaleriaPage";
 
 function App() {
   return (
@@ -17,6 +18,15 @@ function App() {
           element={
             <Transition>
               <Main />
+            </Transition>
+          }
+        />
+
+        <Route
+          path="/galeria"
+          element={
+            <Transition>
+              <GaleriaPage />
             </Transition>
           }
         />

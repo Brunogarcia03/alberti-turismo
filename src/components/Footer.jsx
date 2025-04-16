@@ -20,30 +20,30 @@ function Footer({ bg = "#000" }) {
         © {new Date().getFullYear()} Alberti Turismo
       </p>
       <div className="w-full flex flex-col lg:flex-row items-center justify-between gap-4">
-        <ul className="flex items-center gap-5">
+        <ul className="flex items-center gap-5 uppercase">
           <li
-            className="hover:scale-110 transition-all duration-300"
+            className="hover:scale-110 transition-all duration-300 cursor-pointer"
             onClick={() => navigate(`/municipalidad`)}
           >
-            <span className="capitalize text-white">Municipalidad</span>
+            <span className="uppercase text-white">Municipalidad</span>
           </li>
           <li
-            className="hover:scale-110 transition-all duration-300"
+            className="hover:scale-110 transition-all duration-300 cursor-pointer"
             onClick={() => navigate(`/parroquia`)}
           >
-            <span className="capitalize text-white">parroquia</span>
+            <span className="uppercase text-white">parroquia</span>
           </li>
           <li
-            className="hover:scale-110 transition-all duration-300"
+            className="hover:scale-110 transition-all duration-300 cursor-pointer"
             onClick={() => navigate(`/plaza`)}
           >
-            <span className="capitalize text-white">plaza</span>
+            <span className="uppercase text-white">plaza</span>
           </li>
           <li
-            className="hover:scale-110 transition-all duration-300"
+            className="hover:scale-110 transition-all duration-300 cursor-pointer"
             onClick={() => navigate(`/museo`)}
           >
-            <span className="capitalize text-white">museo</span>
+            <span className="uppercase text-white">museo</span>
           </li>
         </ul>
 

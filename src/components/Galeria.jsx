@@ -1,5 +1,5 @@
 import { useNavigate } from "react-router-dom";
-import { MouseImageTrail } from "../ui/MouseImageTrail";
+import { MouseImageTrail } from "../components/ui/MouseImageTrail";
 import { FiImage } from "react-icons/fi";
 
 const Galeria = () => {
@@ -8,7 +8,7 @@ const Galeria = () => {
   return (
     <section
       onClick={() => navigate("/galeria")}
-      className="md:min-h-screen w-full py-16 px-36"
+      className="md:min-h-screen w-full py-16 px-5 sm:px-16 lg:px-36"
     >
       <MouseImageTrail
         renderImageBuffer={80}

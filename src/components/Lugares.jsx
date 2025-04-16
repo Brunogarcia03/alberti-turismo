@@ -1,5 +1,5 @@
 import { motion } from "motion/react";
-import Heading from "../ui/Heading";
+import Heading from "../components/ui/Heading";
 import { useNavigate } from "react-router-dom";
 
 const Lugares = () => {

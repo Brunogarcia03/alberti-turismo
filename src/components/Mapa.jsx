@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import Zoom from "react-medium-image-zoom";
 import "react-medium-image-zoom/dist/styles.css";
-import Heading from "../ui/Heading";
+import Heading from "../components/ui/Heading";
 
 function Mapa() {
   return (

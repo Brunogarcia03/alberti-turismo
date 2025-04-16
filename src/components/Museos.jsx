@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import Heading from "../ui/Heading";
+import Heading from "../components/ui/Heading";
 import { useNavigate } from "react-router-dom";
 
 function Museos() {
